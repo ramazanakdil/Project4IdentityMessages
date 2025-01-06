@@ -1,0 +1,131 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesajlaşma Sistemi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Sol Navbar */
+        .navbar {
+            width: 260px;
+            height: 100vh;
+            background: linear-gradient(180deg, #1d3557, #457b9d);
+            color: #fff;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+            .navbar h4 {
+                text-align: center;
+                margin-bottom: 20px; 
+                font-weight: bold;
+                color: #f1faee;
+            }
+
+            .navbar a {
+                text-decoration: none;
+                color: #a8dadc;
+                font-size: 15px;
+                margin: 5px 0; 
+                padding: 10px 15px;
+                border-radius: 5px;
+                transition: all 0.3s ease;
+            }
+
+                .navbar a:hover {
+                    background-color: #f1faee;
+                    color: #1d3557;
+                    font-weight: bold;
+                }
+
+        /* Üst Header */
+        .header {
+            height: 70px;
+            margin-left: 260px;
+            background-color: #f8f9fa;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            justify-content: space-between;
+        }
+
+            .header .logo {
+                font-size: 18px;
+                font-weight: bold;
+                color: #343a40;
+            }
+
+            .header .profile {
+                display: flex;
+                align-items: center;
+            }
+
+                .header .profile img {
+                    width: 40px !important;
+                    height: 40px !important;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-left: 10px;
+                }
+
+        /* İçerik */
+        .content {
+            margin-left: 260px;
+            padding: 30px;
+            background-color: #f1f5f9;
+            min-height: calc(100vh - 70px);
+        }
+
+            .content h1 {
+                color: #343a40;
+                font-weight: bold;
+            }
+
+            .content p {
+                color: #6c757d;
+                font-size: 18px;
+            }
+    </style>
+</head>
+<body>
+    <!-- Sol Navbar -->
+    <div class="navbar">
+        <h4>📨 Mesajlaşma Sistemi</h4>
+        <a href="#">📥 Gelen Kutusu</a>
+        <a href="#">📤 Giden Kutusu</a>
+        <a href="#">✉️ Yeni Mesaj Oluştur</a>
+        <a href="#">⚙️ Ayarlar</a>
+        <a href="#">🔒 Çıkış</a>
+    </div>
+
+    <!-- Üst Header -->
+    <div class="header">
+        <div class="logo">Mesajlaşma Sistemi</div>
+        <div class="profile">
+            <span>Kullanıcı Adı</span>
+            <img src="https://via.placeholder.com/40" alt="Profil Resmi">
+        </div>
+    </div>
+
+    <!-- İçerik -->
+    <div class="content">
+        <h1>Hoş Geldiniz!</h1>
+        <p>Sol menüyü kullanarak gelen ve giden kutularınızı yönetebilir, yeni mesajlar oluşturabilirsiniz.</p>
+    </div>
+</body>
+</html>

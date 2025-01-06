@@ -1,0 +1,66 @@
+﻿@model LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('/css/freepik__upload__53135.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.9); 
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        .btn-primary {
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .form-control {
+            height: 45px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h3 class="login-title">Giriş Yap</h3>
+        <form method="post">
+            <div class="mb-3">
+                <label for="Username" class="form-label">Kullanıcı Adınız</label>
+                <input type="text" class="form-control" id="Username" asp-for="Username" placeholder="Kullanıcı Adı">
+            </div>
+            <div class="mb-3">
+                <label for="Password" class="form-label">Şifreniz</label>
+                <input type="password" class="form-control" id="Password" asp-for="Password" placeholder="Şifre">
+            </div>
+            <button type="submit" class="btn btn-primary">Giriş Yap</button>
+        </form>
+    </div>
+</body>
+</html>

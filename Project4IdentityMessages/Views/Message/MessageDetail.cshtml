@@ -1,0 +1,26 @@
+﻿@using Project4IdentityMessages_EntityLayer.Concrete
+@model Message
+
+@{
+    ViewData["Title"] = "MessageDetail";
+    Layout = "~/Views/Shared/IdentityLayout.cshtml";
+}
+
+
+<div class="container mt-4">
+    <h2 class="text-primary">Mesaj Detayı</h2>
+    <div class="card mt-4">
+        <div class="card-header bg-primary text-white">
+            <h5>"@Model.Subject" Kategorisinde Yeni Mesaj</h5>
+        </div>
+        <div class="card-body">
+            <p><strong>Gönderen Ad Soyad: </strong> @Model.AppUser.Name @Model.AppUser.Surname</p>
+            <p><strong>Gönderen Mail: </strong>@Model.SenderMail</p>
+            <p><strong>Kategori: </strong>@Model.Category.CategoryName</p>
+            <p><strong>Gönderim Tarihi: </strong>@Model.CreatedAt.ToString("dd.MMM.yyyy")</p>
+            <hr />
+            <h6 class="text-secondary">Mesaj İçeriği:</h6>
+            <p>@Model.Content</p>
+        </div>
+    </div>
+</div>

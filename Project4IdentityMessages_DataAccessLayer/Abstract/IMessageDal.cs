@@ -10,5 +10,9 @@ namespace Project4IdentityMessages_DataAccessLayer.Abstract
     public interface IMessageDal : IGenericDal<Message>
     {
         List<Message> GetMessagesByReceiver(string receiverMail);
+        public Message  MessageDetails(int id);
+        List<Message> GetMessagesBySender(string senderMail);
+
+        public Message MessageDetailsSender(int id);
     }
 }

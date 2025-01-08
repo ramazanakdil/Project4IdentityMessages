@@ -1,0 +1,43 @@
+﻿@model Project4IdentityMessages_EntityLayer.Concrete.Message
+
+@{
+    ViewData["Title"] = "NewMessage";
+    Layout = "~/Views/Shared/IdentityLayout.cshtml";
+}
+
+
+
+<div class="container mt-4">
+    <h2>Yeni Mesaj Oluştur</h2>
+    <br /><br />
+
+    <form method="post">
+        <div class="form-group">
+            <label>Alıcı Mail</label>
+            <input type="email" class="form-control" asp-for="ReceiverMail" required />
+            <br />
+        </div>
+        <div class="form-group">
+            <label>Konu</label>
+            <input type="text" class="form-control" asp-for="Subject" required />
+            <br />
+        </div>
+        <div class="form-group">
+            <label>Mesaj</label>
+            <textarea class="form-control" asp-for="Content" rows="5" required></textarea>
+            <br />
+        </div>
+        <select class="form-select" asp-for="CategoryId">
+            <option value="">Kategori Seçin</option>
+            @if (ViewBag.CategoryTypes != null)
+            {
+                foreach (var category in (List<SelectListItem>)ViewBag.CategoryTypes)
+                {
+                    <option value="@category.Value">@category.Text</option>
+                }
+            }
+        </select>
+        <br />
+        <button type="submit" class="btn btn-primary mt-3">Gönder</button>
+    </form>
+</div>

@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -44,7 +43,6 @@
                 padding: 10px 15px;
                 border-radius: 5px;
                 transition: all 0.3s ease;
-                
             }
 
                 .navbar a:hover {
@@ -107,19 +105,18 @@
     <!-- Sol Navbar -->
     <div class="navbar">
         <h4>📨 Mesajlaşma Sistemi</h4>
-        <a href="#">📥 Gelen Kutusu</a>
-        <a href="#">📤 Giden Kutusu</a>
-        <a href="#">✉️ Yeni Mesaj Oluştur</a>
+        <a href="/Message/Inbox">📥 Gelen Kutusu</a>
+        <a href="/Message/Outbox">📤 Giden Kutusu</a>
+        <a href="/Message/NewMessage">✉️ Yeni Mesaj Oluştur</a>
         <a href="#">⚙️ Ayarlar</a>
-        <a href="#">🔒 Çıkış</a>
+        <a asp-controller="Message" asp-action="Logout">🔒 Çıkış</a>
     </div>
 
     <!-- Üst Header -->
-    <div class="header">
-        <div class="logo">Mesajlaşma Sistemi</div>
+    <div  class="header">
+        <div style="position:" class="logo"></div>
         <div class="profile">
-            <span>Kullanıcı Adı</span>
-            <img src="https://via.placeholder.com/40" alt="Profil Resmi">
+            
         </div>
     </div>
 

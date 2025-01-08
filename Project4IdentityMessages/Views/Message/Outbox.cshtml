@@ -1,17 +1,18 @@
 ﻿@using Project4IdentityMessages_EntityLayer.Concrete
 @model List<Message>
+
 @{
-    ViewData["Title"] = "Inbox";
+    ViewData["Title"] = "Outbox";
     Layout = "~/Views/Shared/IdentityLayout.cshtml";
 }
 
 <div class="container mt-4">
-    <h3>Gelen Kutusu</h3>
+    <h3>Giden Kutusu</h3>
     <br />
     <table class="table table-striped table-hover">
         <thead class="table-dark">
             <tr>
-                <th>Gönderen</th>
+                <th>Alıcı</th>
                 <th>Konu</th>
                 <th>Kategori</th>
                 <th>Tarih</th>
@@ -22,11 +23,11 @@
             @foreach (var message in Model)
             {
                 <tr>
-                    <td>@message.SenderMail</td>
+                    <td>@message.ReceiverMail</td>
                     <td>@message.Subject</td>
                     <td>@message.Category.CategoryName</td>
                     <td>@message.CreatedAt.ToString("dd.MM.yyyy")</td>
-                    <td><a href="/Message/MessageDetail/@message.MessageId" class="btn btn-primary">Mesajı Aç</a></td>
+                    <td><a href="/Message/MessageDetailSender/@message.MessageId" class="btn btn-primary">Mesajı Aç</a></td>
                 </tr>
             }
         </tbody>

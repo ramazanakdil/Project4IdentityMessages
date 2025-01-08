@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Project4IdentityMessages.Models;
 using Project4IdentityMessages_BusinessLayer.Container;
 using Project4IdentityMessages_DataAccessLayer.Context;
@@ -16,6 +17,13 @@ builder.Services.ContainerDependencies();
 
 
 
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Login/Index"; // Giriþ sayfasý
+        options.LogoutPath = "/Message/Logout"; // Çýkýþ iþlemi
+    });
 
 
 builder.Services.AddControllersWithViews();

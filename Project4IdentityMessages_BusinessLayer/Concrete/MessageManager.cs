@@ -38,9 +38,24 @@ namespace Project4IdentityMessages_BusinessLayer.Concrete
             return _messageDal.GetMessagesByReceiver(receiverMail);
         }
 
+        public List<Message> TGetMessagesBySender(string senderMail)
+        {
+            return _messageDal.GetMessagesBySender(senderMail);
+        }
+
         public void TInsert(Message entity)
         {
             _messageDal.Insert(entity);
+        }
+
+        public Message TMessageDetails(int id)
+        {
+            return _messageDal.MessageDetails(id);
+        }
+
+        public Message TMessageDetailsSender(int id)
+        {
+            return _messageDal.MessageDetailsSender(id);
         }
 
         public void TUpdate(Message entity)

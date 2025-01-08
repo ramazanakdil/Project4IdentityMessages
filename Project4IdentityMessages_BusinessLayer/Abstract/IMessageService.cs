@@ -10,5 +10,8 @@ namespace Project4IdentityMessages_BusinessLayer.Abstract
     public interface IMessageService : IGenericService<Message>
     {
         List<Message> TGetMessagesByReceiver(string receiverMail);
+        public Message TMessageDetails(int id);
+        List<Message> TGetMessagesBySender(string senderMail);
+        public Message TMessageDetailsSender(int id);
     }
 }
